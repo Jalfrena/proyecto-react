@@ -1,0 +1,163 @@
+/* BankDetail.module.css */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.nombre {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 0.25rem;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.score {
+  margin-top: var(--space-sm);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-success);
+}
+
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+.tab {
+  flex-shrink: 0;
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border-color: var(--color-accent);
+}
+
+.tabActiva {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.contenido {
+  animation: fadeIn 0.3s ease;
+}
+
+.tituloSeccion {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.listaItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin-bottom: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.concepto {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.bajo {
+  background-color: rgba(58, 143, 104, 0.15);
+  color: var(--color-success);
+}
+
+.medio {
+  background-color: rgba(198, 154, 58, 0.15);
+  color: var(--color-warning);
+}
+
+.alto {
+  background-color: rgba(184, 74, 74, 0.15);
+  color: var(--color-danger);
+}
+
+.gratis {
+  background-color: rgba(58, 143, 104, 0.2);
+  color: var(--color-success);
+}
+
+.valorOficial {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin: 0.25rem 0;
+}
+
+.explicacion {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  margin: 0.3rem 0 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

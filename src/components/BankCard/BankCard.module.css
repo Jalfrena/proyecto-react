@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.logo {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.name {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-snug);
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+}
+
+.star {
+  color: var(--color-warning);
+}
+
+.tasa {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.tasa strong {
+  color: var(--color-text-primary);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-xs);
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-primary-light);
+  gap: var(--space-sm);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}

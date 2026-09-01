@@ -1,0 +1,102 @@
+.surveyContainer {
+  max-width: 620px;
+  margin: var(--space-xl) auto;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.title {
+  font-size: var(--text-h2);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--color-text-primary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.starRating {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.starRating label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.stars {
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.starBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-border);
+  border-radius: var(--radius-xs);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.starBtn:hover {
+  color: var(--color-warning);
+  background-color: var(--color-surface-elevated);
+  transform: scale(1.1);
+}
+
+.starBtn.filled {
+  color: var(--color-warning);
+}
+
+.starBtn:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.alerta {
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.alerta.exito {
+  background-color: rgba(44, 133, 97, 0.15);
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+
+.alerta.error {
+  background-color: rgba(184, 74, 74, 0.15);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+}
+
+@media (max-width: 480px) {
+  .surveyContainer {
+    margin: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .starBtn {
+    width: 36px;
+    height: 36px;
+  }
+}

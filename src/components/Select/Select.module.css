@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.required {
+  color: var(--color-danger);
+  margin-left: var(--space-2xs);
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.select:hover:not(:disabled):not(.error) {
+  border-color: var(--color-text-muted);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px var(--color-focus);
+}
+
+.select:disabled,
+.select.disabled {
+  background-color: var(--color-surface-elevated);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.select.error {
+  border-color: var(--color-danger);
+}
+
+.select.error:focus {
+  box-shadow: 0 0 0 3px rgba(184, 74, 74, 0.2);
+}
+
+.chevron {
+  position: absolute;
+  right: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.errorText {
+  margin: 0;
+  font-size: var(--font-size-2xs);
+  color: var(--color-danger);
+  line-height: var(--line-height-normal);
+}
+
+.hintText {
+  margin: 0;
+  font-size: var(--font-size-2xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-normal);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] {
+  .select {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+  }
+
+  .select:hover:not(:disabled):not(.error) {
+    border-color: var(--color-text-muted);
+  }
+
+  .select:disabled,
+  .select.disabled {
+    background-color: var(--color-surface-elevated);
+  }
+}

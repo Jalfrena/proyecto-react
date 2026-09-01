@@ -1,0 +1,202 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  height: 64px;
+  padding: 0 var(--space-lg);
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.logo:hover {
+  color: var(--color-text-primary);
+}
+
+.logoText {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.logoImg {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: filter var(--transition-base);
+}
+
+/* Dark mode: invertir logo oscuro para que sea visible en fondo oscuro */
+[data-theme="dark"] .logoImg {
+  filter: brightness(0) invert(1);
+}
+
+.mobileToggle {
+  display: none;
+  padding: var(--space-xs);
+  color: var(--color-text-primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.mobileToggle:hover {
+  background-color: var(--color-surface-elevated);
+}
+
+.navLinksWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-elevated);
+}
+
+.navLink.active {
+  color: var(--color-primary);
+  background-color: var(--gradient-primary-soft);
+}
+
+.desktopActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.mobileActions {
+  display: none;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 var(--space-md);
+  }
+
+  .mobileToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navLinksWrapper {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-surface);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: var(--space-lg);
+    gap: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-xl);
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+    overflow-y: auto;
+    z-index: var(--z-dropdown);
+  }
+
+  .navLinksWrapper.open {
+    transform: translateX(0);
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2xs);
+  }
+
+  .navLink {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-base);
+    justify-content: center;
+  }
+
+  .desktopActions {
+    display: none;
+  }
+
+  .mobileActions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoText {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] {
+  .navbar {
+    background-color: var(--color-surface);
+    border-bottom-color: var(--color-border);
+  }
+
+  .navLinksWrapper {
+    background-color: var(--color-surface);
+    border-bottom-color: var(--color-border);
+  }
+
+  .navLink:hover {
+    background-color: var(--color-surface-elevated);
+  }
+
+  .navLink.active {
+    background-color: var(--gradient-primary-soft);
+  }
+
+  .mobileToggle:hover {
+    background-color: var(--color-surface-elevated);
+  }
+}

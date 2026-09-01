@@ -1,0 +1,87 @@
+.trigger {
+  display: inline-block;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: var(--z-tooltip);
+  pointer-events: none;
+  animation: fadeIn var(--transition-fast) ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-inverse);
+  background-color: var(--color-text-primary);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  max-width: 240px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+}
+
+.top .arrow {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: var(--color-text-primary);
+}
+
+.bottom .arrow {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-color: var(--color-text-primary);
+}
+
+.left .arrow {
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-color: var(--color-text-primary);
+}
+
+.right .arrow {
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right-color: var(--color-text-primary);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] {
+  .content {
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .top .arrow {
+    border-top-color: var(--color-text-primary);
+  }
+
+  .bottom .arrow {
+    border-bottom-color: var(--color-text-primary);
+  }
+
+  .left .arrow {
+    border-left-color: var(--color-text-primary);
+  }
+
+  .right .arrow {
+    border-right-color: var(--color-text-primary);
+  }
+}

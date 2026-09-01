@@ -1,0 +1,115 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-3xl);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--space-3xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-family: var(--font-family-display);
+  font-size: var(--text-h2);
+  color: var(--color-text-primary);
+  margin: var(--space-xs) 0;
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 560px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  text-decoration: none;
+  color: inherit;
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-elevated);
+}
+
+.itemBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemNumero {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.itemBody h3 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  margin: var(--space-2xs) 0;
+}
+
+.itemBody p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.itemMeta {
+  display: flex;
+  gap: var(--space-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.itemMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.itemArrow {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
